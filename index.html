@@ -213,6 +213,7 @@ button{font-family:inherit}
 #gInfo{top:58.5%!important;line-height:1.45!important}
 .gHave{display:flex;width:fit-content;margin:0 auto;align-items:center;gap:1.4cqw;background:rgba(10,30,60,.75);border:.5cqw solid #7ad0ff;border-radius:6cqw;padding:.8cqw 4cqw .8cqw 1.4cqw;font-size:4.4cqw;margin-bottom:1.2cqw;font-family:sans-serif}.gHave img{width:7cqw}.gHave b{color:#7ad0ff;font-size:5.6cqw}
 .gC{display:inline-flex;align-items:center;margin-left:1.6cqw;background:rgba(0,0,0,.25);border-radius:3cqw;padding:0 2cqw 0 .6cqw;font-family:sans-serif}.gC img{width:5cqw;margin-right:.6cqw}
+.cPill{border-color:#e8b84a}.cPill b{color:#ffe08a}
 .hpPill{display:inline-flex;align-items:center;gap:1cqw;background:rgba(60,40,0,.55);border:.4cqw solid #ffd34d;border-radius:5cqw;padding:.4cqw 3cqw .4cqw 1cqw;font-family:sans-serif;font-weight:900;color:#fff3c4}.hpPill img{width:5.4cqw}.hpPill b{color:#ffd34d;font-size:4.4cqw}
 .kN{display:flex;gap:1.6cqw;align-items:center;margin:0 0 2.4cqw;flex-wrap:wrap}.kN .l{font-size:3.4cqw;font-weight:900;color:#fff3c4;margin-right:1cqw}.kN div.o{flex:1;min-width:13cqw;text-align:center;font-weight:900;font-size:3.6cqw;padding:1.6cqw 0;border-radius:3cqw;background:#3e1656;color:#d8c2ea;border:.4cqw solid #6b3a8c;cursor:pointer;font-family:sans-serif}.kN div.o.on{background:#e8b84a;color:#3b0a4f;border-color:#fff3c4}.kN div.o.no{opacity:.35}
 .mItem .gn{font-size:3.2cqw;color:#9fe59f;font-weight:900;margin-top:.6cqw;font-family:sans-serif}.mItem .gn s{text-decoration:none;color:#ff9c9c}
@@ -254,6 +255,11 @@ button{font-family:inherit}
 .fInfo .r{font-size:3cqw;color:#ffd96a}
 .fInfo .s{font-size:2.7cqw;color:#e0cdf0;font-family:sans-serif}
 #bDay{position:absolute;left:0;right:0;top:46cqw;text-align:center;color:#fff3c4;font-size:4cqw;font-weight:900;text-shadow:0 0 1cqw #000;z-index:5}
+/* 名前の横のタイプ */
+.tyB{display:inline-block;margin-left:1.4cqw;font-size:2.5cqw;font-weight:900;color:#3b0a4f;background:#ffd96a;border-radius:2cqw;padding:.1cqw 1.4cqw;vertical-align:middle;font-family:sans-serif;letter-spacing:0}
+.nwL,.hpL{text-align:left;font-size:3.4cqw;line-height:1.6;max-height:58vh;overflow-y:auto;padding-right:1cqw}
+.nwR{border-bottom:.3cqw dashed #c9a86a;padding:1.6cqw 0}.nwR .d{display:inline-block;background:#8a1050;color:#fff;font-size:2.6cqw;border-radius:2cqw;padding:0 1.6cqw;margin-right:1.4cqw}
+.hpS{font-weight:900;font-size:3.8cqw;color:#8a1050;margin:2.4cqw 0 .8cqw;border-bottom:.3cqw solid #e2c88f}
 #bHint{position:absolute;left:0;right:0;top:52cqw;text-align:center;color:#fff;font-size:3.4cqw;font-weight:900;text-shadow:0 0 1cqw #000;z-index:5}
 .fighter{position:absolute;bottom:31.5%;width:56cqw;display:flex;align-items:flex-end;justify-content:center;transition:transform .45s cubic-bezier(.3,1.4,.5,1);z-index:4}
 #fL{left:-4%}#fR{right:-4%}
@@ -547,7 +553,7 @@ button{font-family:inherit}
 .evParty2{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw;margin:0 0 3cqw;align-items:center}
 .evParty2 img{width:100%;height:33cqw;object-fit:contain;display:block;cursor:pointer;filter:drop-shadow(0 1cqw .8cqw #0007);transition:transform .12s}
 .evParty2 img:active{transform:scale(.95)}
-#evHomeI{position:absolute;right:2cqw;top:50%;transform:translateY(-50%);width:17cqw;cursor:pointer;z-index:2;filter:drop-shadow(0 .5cqw .5cqw #0006)}
+#evHomeI,.homeI{position:absolute;right:2cqw;top:50%;transform:translateY(-50%);width:17cqw;cursor:pointer;z-index:2;filter:drop-shadow(0 .5cqw .5cqw #0006)}
 #evTabs .evTI{cursor:pointer;transition:transform .15s,filter .15s;filter:brightness(.72) saturate(.8);position:relative}
 #evTabs .evTI img{width:100%;display:block}
 #evTabs .evTI.on{filter:drop-shadow(0 0 2.4cqw #ffd76a) brightness(1.08);transform:translateY(-1cqw) scale(1.04)}
@@ -821,6 +827,28 @@ button{font-family:inherit}
 #bashoTag .hxB{display:inline-block;width:26cqw;height:2.2cqw;background:#1a0626;border-radius:2cqw;overflow:hidden;border:.25cqw solid rgba(126,230,255,.5)}
 #bashoTag .hxB i{display:block;height:100%;background:linear-gradient(90deg,#7ee6ff,#b07cf0)}
 #bashoTag .hxT{color:#bfe9ff;font-size:2.7cqw}
+.hsTeam{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4cqw;background:linear-gradient(#5b2380,#3b0a4f);border:.6cqw solid #e8b84a;border-radius:3cqw;padding:2.4cqw}
+.hsSl{position:relative;background:linear-gradient(#3e1656,#250a35);border:.5cqw solid #8a5cb0;border-radius:2.4cqw;padding:1cqw 1cqw 1.6cqw;text-align:center;cursor:pointer;min-height:40cqw;color:#fff3c4}
+.hsSl.on{border-color:#ffd34d;box-shadow:0 0 0 .6cqw #ffd34d,0 0 3cqw rgba(255,211,77,.7)}
+.hsSl.wait{animation:hsW 1s ease-in-out infinite}@keyframes hsW{50%{box-shadow:0 0 0 .6cqw #7ad0ff}}
+.hsNo{font-size:3cqw;font-weight:900;color:#3b0a4f;background:#e8b84a;border-radius:2cqw;margin:0 auto 1cqw;width:fit-content;padding:0 2cqw}
+.hsNm{font-size:3cqw;font-weight:900;white-space:nowrap;overflow:hidden}.hsRk{font-size:2.5cqw;color:#ffd96a}
+.hsEmpty{font-size:4cqw;font-weight:900;color:#a98bc4;padding-top:9cqw;line-height:1.4}
+.hsX{position:absolute;right:-1cqw;top:-1.4cqw;background:#e0434f;color:#fff;font-size:2.5cqw;font-weight:900;border-radius:2cqw;padding:.2cqw 1.4cqw;font-family:sans-serif}
+.hsGuide{margin:2cqw 0 0;text-align:center;font-size:3.2cqw;font-weight:900;color:#fff3c4;background:rgba(255,255,255,.08);border-radius:2cqw;padding:1.6cqw}
+.hsGuide b{color:#ffd34d}.hsCan{display:inline-block;margin-left:2cqw;background:#6b5a78;color:#fff;border-radius:2cqw;padding:0 2cqw;cursor:pointer}
+.cell.pend{box-shadow:0 0 0 .6cqw #7ad0ff}
+html,body{overscroll-behavior:none;position:fixed;inset:0;width:100%}
+.gw{position:relative}
+.gw.gwUp .g{box-shadow:0 0 1.6cqw #ffd34d;border-color:#ffd34d}
+.gw.gwBig .g{box-shadow:0 0 3cqw #ff8a3d,0 0 1cqw #fff;animation:gwShake .5s ease-in-out 2}
+@keyframes gwShake{25%{transform:translateY(-.4cqw)}75%{transform:translateY(.4cqw)}}
+.gwPlus{position:absolute;right:23cqw;top:-2.6cqw;font-style:normal;font-weight:900;font-size:3.6cqw;color:#ffd34d;text-shadow:0 0 1cqw #000,0 .3cqw 0 #8a1050;animation:gwP 1.6s ease-out forwards;pointer-events:none;font-family:sans-serif}
+.gwPlus.big{font-size:5.4cqw;color:#fff;text-shadow:0 0 1.4cqw #ff8a3d,0 .4cqw 0 #8a1050}
+@keyframes gwP{0%{opacity:0;transform:translateY(2cqw) scale(.6)}20%{opacity:1;transform:translateY(0) scale(1.2)}70%{opacity:1;transform:translateY(-1cqw) scale(1)}100%{opacity:0;transform:translateY(-3cqw)}}
+.bars.gwFlash{animation:gwF .9s ease-out}@keyframes gwF{0%{box-shadow:0 0 0 0 #ffd34d}40%{box-shadow:0 0 0 1cqw #ffd34d88}100%{box-shadow:0 0 0 0 transparent}}
+.kTag{display:inline-block;margin-right:1.4cqw;font-size:2.6cqw;color:#3b0a4f;background:#ffd96a;border-radius:2cqw;padding:0 1.6cqw;vertical-align:middle;font-family:sans-serif}
+.dmI.cnI{height:4.4cqw;margin-right:.6cqw;vertical-align:-1cqw}
 /* ===== 12月イベント「拾った子猫を育てよう」 ===== */
 #ev12{background:url(img/jinja_bg.webp?v=1) center/cover}
 #ev12 .body{padding:0;overflow:hidden}
@@ -1559,7 +1587,7 @@ async function doKuji(){const J=jj();
   if(K[0]==='大吉')jingle('gachaR');else sfx('win');
   await jjAsk(jjKujiRes(J));jjClose();}
 const GO={
-  gift:openGift,daily:openDaily,jinja:()=>openJinja(),help:openHelp,settings:openSettings,banzuke:()=>{drawBanzuke();show('banzuke');},
+  gift:openGift,daily:openDaily,jinja:()=>openJinja(),help:openNews,howto:openHelp,settings:openSettings,banzuke:()=>{drawBanzuke();show('banzuke');},
   hensei:()=>{renderHensei();show('hensei');},zukan:()=>{renderZukan();show('zukan');},friend:()=>{renderFriend();show('friend');},
   event:()=>{if(e12Open())return openEv12();renderEvent();show('event');evMovie();},seiseki:()=>{renderSeiseki();show('seiseki');},
   heya:()=>{renderHeya();show('heya');},shop:()=>{renderShop();show('shop');},koubou:()=>{renderKoubou();show('koubou');},hanko:()=>{renderHanko();show('hanko');},chankoSel:()=>{if(!ownIds().length)return toast('まだ力士がいないにゃ');renderChankoSel();show('chankoSel');},keikoPick:()=>{if(!ownIds().length)return;renderKeikoSel();show('keikoSel');},
@@ -1759,10 +1787,33 @@ function sortedIds(){const ids=ownIds();if(hySort===1)ids.sort((a,b)=>S.cats[b].
 function sortTabs(B,re){const tabs=document.createElement('div');tabs.className='tabs';['番号','レベル','番付','レア'].forEach((t,i)=>{const e=document.createElement('div');e.className='tab'+(i===hySort?' on':'');e.textContent=t;e.onclick=()=>{hySort=i;re();};tabs.appendChild(e);});B.appendChild(tabs);}
 function renderHeya(){const B=$('hyBody');B.innerHTML=`<div class="sum">部屋の力士 ${ownIds().length}匹　タップで育成</div>`;sortTabs(B,renderHeya);
   const g=document.createElement('div');g.className='grid';sortedIds().forEach(id=>{const e=catCell(id,S.team.includes(id)?'<span class="newb" style="background:#e8b84a;color:#3b0a4f">出場</span>':'');e.onclick=()=>openDetail(id);g.appendChild(e);});B.appendChild(g);}
-function renderHensei(){const B=$('hsBody');B.innerHTML=`<div class="sum">本場所と手合せに出る3匹をえらぶ（${S.team.length}/3）</div>`;sortTabs(B,renderHensei);
+// ---- 力士編成：上に「出場する3匹」の枠、下に部屋の猫。枠や猫をタップして入れかえ ----
+let hsSlot=-1,hsPend=0;   // えらんでいる枠（-1＝なし）／先にえらんだ猫
+function hsPut(slot,id){const t=S.team;const j=t.indexOf(id);
+  if(slot>=t.length){if(j>=0)return;t.push(id);}                       // 空いている枠に入れる
+  else if(j>=0){const x=t[slot];t[slot]=id;t[j]=x;}                     // 出場どうしで順番を入れかえ
+  else{const out=t[slot];t[slot]=id;toast(`${NAMES[out-1]} → ${NAMES[id-1]} に交代！`);}
+  hsSlot=-1;hsPend=0;save();sfx('tap');renderHensei();}
+function renderHensei(){const B=$('hsBody');const t=S.team;
+  B.innerHTML=`<div class="sum">本場所と手合せに出る3匹</div>`;
+  const box=document.createElement('div');box.className='hsTeam';
+  for(let k=0;k<3;k++){const id=t[k];const e=document.createElement('div');e.className='hsSl'+(hsSlot===k?' on':'')+(hsPend&&!id?' wait':'')+(hsPend&&id?' wait':'');
+    e.innerHTML=`<div class="hsNo">${k+1}番手</div>`;
+    if(id){const c=S.cats[id];e.appendChild(catCard(id));e.insertAdjacentHTML('beforeend',`<div class="hsNm">${NAMES[id-1]}</div><div class="hsRk">${RANKS[c.rank]}　Lv${c.lv}</div>`);
+      if(t.length>1){const x=document.createElement('div');x.className='hsX';x.textContent='はずす';x.onclick=ev=>{ev.stopPropagation();t.splice(k,1);hsSlot=-1;hsPend=0;save();sfx('tap');renderHensei();};e.appendChild(x);}}
+    else e.insertAdjacentHTML('beforeend','<div class="hsEmpty">＋<br>空き</div>');
+    e.onclick=()=>{if(hsPend){hsPut(Math.min(k,t.length),hsPend);return;}hsSlot=hsSlot===k?-1:k;sfx('tap');renderHensei();};box.appendChild(e);}
+  B.appendChild(box);
+  const g0=document.createElement('div');g0.className='hsGuide';
+  g0.innerHTML=hsPend?`<b>${NAMES[hsPend-1]}</b>を入れる枠をえらんでね <span class="hsCan">やめる</span>`:hsSlot>=0?`<b>${hsSlot+1}番手</b>に入れる猫を下からえらんでね <span class="hsCan">やめる</span>`:'枠をタップ → 下の猫をタップで入れかえ（猫からえらんでもOK）';
+  const cn=g0.querySelector('.hsCan');if(cn)cn.onclick=()=>{hsSlot=-1;hsPend=0;renderHensei();};B.appendChild(g0);
+  B.insertAdjacentHTML('beforeend','<div class="hkSec" style="margin-top:2cqw">部屋の猫</div>');sortTabs(B,renderHensei);
   const g=document.createElement('div');g.className='grid';
-  sortedIds().forEach(id=>{const i=S.team.indexOf(id);const e=catCell(id,i>=0?`<div class="mark">${i+1}</div>`:'');if(i>=0)e.classList.add('sel');
-    e.onclick=()=>{const k=S.team.indexOf(id);if(k>=0){if(S.team.length<=1)return toast('1匹は出場させてね');S.team.splice(k,1);}else{if(S.team.length>=3)return toast('出場できるのは3匹までだにゃ');S.team.push(id);}save();renderHensei();};g.appendChild(e);});
+  sortedIds().forEach(id=>{const i=t.indexOf(id);const e=catCell(id,i>=0?`<div class="mark">${i+1}</div>`:'');if(i>=0)e.classList.add('sel');if(hsPend===id)e.classList.add('pend');
+    e.onclick=()=>{if(hsSlot>=0){hsPut(Math.min(hsSlot,t.length),id);return;}
+      if(i>=0){toast(`${NAMES[id-1]}は${i+1}番手で出場中`);return;}
+      if(t.length<3){hsPut(t.length,id);return;}
+      hsPend=hsPend===id?0:id;sfx('tap');renderHensei();if(hsPend)toast('交代する枠を上でえらんでね');};g.appendChild(e);});
   B.appendChild(g);}
 
 // ================= 猫の詳細・育成 =================
@@ -1844,17 +1895,17 @@ function renderHanko(){const own=stOwn(),B=$('hkBody');if(!S.stGift)S.stGift={};
     const k=await modal(`<h3>スタンプを買う？</h3><div class="stI" style="width:36cqw;margin:2cqw auto;background-position:${(i%8)/7*100}% ${Math.floor(i/8)/4*100}%"></div>「${STAMP_N[i]}」<br>コイン ${ST_PRICE}`,[{t:'買う',c:'gold'},{t:'やめる',c:'gray'}]);
     if(k!==0)return;if(S.coin<ST_PRICE)return toast('コインが足りないにゃ');S.coin-=ST_PRICE;own.push(i);save();refreshHUD();jingle('gachaN');toast('スタンプを手に入れた！');renderHanko();});}
 function renderShop(){const B=$('shBody');if(!S.kesho)S.kesho=[];
-  B.innerHTML=`<div class="sum">コイン 🐾${fmt(S.coin)}　持っている ${S.kesho.length}/${KESHO.length}<br><span class="small">化粧まわしをつけた力士は、取組で強くなる（勝ちやすくなる）よ</span></div>`;
+  B.innerHTML=`<div class="sum">${coinPill()}　持っている ${S.kesho.length}/${KESHO.length}<br><span class="small">化粧まわしをつけた力士は、取組で強くなる（勝ちやすくなる）よ</span></div>`;
   KESHO.forEach((k,i)=>{const own=S.kesho.includes(i);const who=keshoOwner(i);
     const e=document.createElement('div');e.className='kItem';e.appendChild(keshoEl(i));
     e.insertAdjacentHTML('beforeend',`<div style="min-width:0"><div class="t">${k[0]}</div><div class="d">${keshoDesc(i)}${who?`<br><span style="color:#ffd96a">${NAMES[who-1]}がつけている</span>`:''}</div></div>`);
     const r=document.createElement('div');r.className='r';
     if(own){const b=document.createElement('div');b.className='btn blue';b.textContent='つける';b.onclick=()=>pickCatFor(i);r.appendChild(b);}
     else if(k[7]==='ev'){const b=document.createElement('div');b.className='btn gray';b.style.fontSize='3cqw';b.textContent='チュール祭で もらえる';b.onclick=()=>{renderEvent();show('event');};r.appendChild(b);}
-    else{const b=document.createElement('div');b.className='btn gold';b.textContent=`🐾${fmt(k[1])}`;if(S.coin<k[1])b.setAttribute('disabled','');b.onclick=()=>buyKesho(i);r.appendChild(b);}
+    else{const b=document.createElement('div');b.className='btn gold';b.innerHTML=`<img class="dmI cnI" src="img/btn41_coin.webp?v=5" alt="">${fmt(k[1])}`;if(S.coin<k[1])b.setAttribute('disabled','');b.onclick=()=>buyKesho(i);r.appendChild(b);}
     e.appendChild(r);B.appendChild(e);});}
 async function buyKesho(i){const k=KESHO[i];if(S.coin<k[1])return toast('コインが足りないにゃ');
-  const ok=await modal(`<h3>${k[0]}</h3><div style="width:34cqw;margin:0 auto">${keshoEl(i).outerHTML}</div>${keshoDesc(i)}<br><b>🐾${fmt(k[1])}</b> で買いますか？`,[{t:'買う',c:'gold'},{t:'やめる',c:'gray'}]);
+  const ok=await modal(`<h3>${k[0]}</h3><div style="width:34cqw;margin:0 auto">${keshoEl(i).outerHTML}</div>${keshoDesc(i)}<br><b><img class="dmI cnI" src="img/btn41_coin.webp?v=5" alt="">${fmt(k[1])}</b> で買いますか？`,[{t:'買う',c:'gold'},{t:'やめる',c:'gray'}]);
   if(ok!==0)return;S.coin-=k[1];S.kesho.push(i);save();jingle('gachaN');
   const j=await modal(`<h3>${k[0]}を買った！</h3>だれにつけますか？`,[{t:'えらぶ',c:'gold'},{t:'あとで',c:'gray'}]);
   renderShop();if(j===0)pickCatFor(i);}
@@ -2031,7 +2082,7 @@ async function startMini(k){const m=MINI[k],E=ev();E.plays++;save();
 }
 // ---- 稽古する力士をえらぶ ----
 function renderChankoSel(){const B=$('csBody');
-  B.innerHTML=`<div class="sum">ちゃんこを食べさせる力士をえらんでね　コイン ${fmt(S.coin)}</div>`;sortTabs(B,renderChankoSel);
+  B.innerHTML=`<div class="sum">ちゃんこを食べさせる力士をえらんでね<br>${coinPill()}</div>`;sortTabs(B,renderChankoSel);
   const g=document.createElement('div');g.className='grid';
   sortedIds().forEach(id=>{const e=catCell(id,S.team.includes(id)?'<span class="newb" style="background:#e8b84a;color:#3b0a4f">出場</span>':'');
     e.onclick=()=>{dId=id;sfx('tap');renderChanko();show('chankoS');};g.appendChild(e);});
@@ -2049,8 +2100,12 @@ const KEIKO=[
  {n:'てっぽう',d:'力がぐんと上がる',img:'img/keiko_teppo.webp?v=5',g:{pow:5}},
  {n:'すり足',d:'速さが上がる',img:'img/keiko_shiko.webp?v=5',g:{spd:5}},
  {n:'ぶつかり稽古',d:'技が上がる・決まり手を覚えることがある',img:'img/keiko_niramiai.webp?v=5',g:{tec:4},waza:true}];
+function coinPill(){return `<span class="hpPill cPill"><img src="img/btn41_coin.webp?v=5" alt="">コイン <b>${fmt(S.coin)}</b></span>`;}
 function hpPill(){tickHP();return `<span class="hpPill"><img src="img/btn44_lightning.webp?v=5" alt="">体力 <b>${S.hp}</b> / ${HP_MAX}</span>`;}
-const KEIKO_NS=[1,3,5,10];   // まとめて稽古の回数
+const KEIKO_NS=[1,3,5,10];
+const KEIKO_ORDER=[1,2,0,3];                       // 画面の並び：てっぽう(力)・すり足(速さ)・四股(重さ)・ぶつかり稽古(技)＝ステータスと同じ順
+const KEIKO_MAIN=['wt','pow','spd','tec'];        // それぞれの稽古でいちばん上がる力
+let keikoFx=null;                                  // 稽古のあと、ゲージが伸びる演出に使う   // まとめて稽古の回数
 function keikoMul(id,c){return (persOf(id)===0?1.3:1)*(1+c.nat/200);}
 // 1回の稽古で上がる数（めやす）：少ない〜多い。上限に近いときは上限まで
 function keikoGainTxt(id,c,k,n){const mul=keikoMul(id,c);return Object.keys(k.g).map(s=>{const cap=trainCap(id,c,s),room=Math.max(0,cap-(c.t[s]||0));
@@ -2071,19 +2126,33 @@ function renderKeiko(){const id=dId,c=S.cats[id];const B=$('kBody');const cost=k
   const kn=document.createElement('div');kn.className='kN';kn.innerHTML='<span class="l">まとめて</span>'+KEIKO_NS.map(x=>`<div class="o${x===n?' on':''}${S.hp<cost*x?' no':''}" data-n="${x}">${x}回<br><span style="font-size:2.8cqw">⚡${cost*x}</span></div>`).join('');
   kn.querySelectorAll('.o').forEach(e=>e.onclick=()=>{S.kN=+e.dataset.n;sfx('tap');renderKeiko();});B.appendChild(kn);
   const L=document.createElement('div');L.className='menuList';
-  KEIKO.forEach((k,i)=>{const e=document.createElement('div');e.className='mItem'+(rec&&rec.i===i?' rec':'');
-    e.innerHTML=`<img src="${k.img}" style="width:24cqw;border-radius:2cqw" alt=""><div><div class="t">${k.n}${rec&&rec.i===i?' <span class="recB">親方のおすすめ</span>':''}</div><div class="d">${k.d}</div><div class="gn">めやす ${n>1?n+'回で ':''}${keikoGainTxt(id,c,k,n)}</div></div><div class="p">⚡${cost*n}</div>`;
-    e.onclick=()=>doKeiko(i,n);L.appendChild(e);});B.appendChild(L);}
+  KEIKO_ORDER.forEach(i=>{const k=KEIKO[i];const e=document.createElement('div');e.className='mItem'+(rec&&rec.i===i?' rec':'');
+    e.innerHTML=`<img src="${k.img}" style="width:24cqw;border-radius:2cqw" alt=""><div><div class="t"><span class="kTag">${STATN[KEIKO_MAIN[i]]}</span>${k.n}${rec&&rec.i===i?' <span class="recB">親方のおすすめ</span>':''}</div><div class="d">${k.d}</div><div class="gn">めやす ${n>1?n+'回で ':''}${keikoGainTxt(id,c,k,n)}</div></div><div class="p">⚡${cost*n}</div>`;
+    e.onclick=()=>doKeiko(i,n);L.appendChild(e);});B.appendChild(L);
+  if(keikoFx&&keikoFx.id===id){const fx=keikoFx;keikoFx=null;B.scrollTop=0;gw.scrollIntoView({block:'center'});setTimeout(()=>growFx(gw,c,fx),150);}}
+// まとめて稽古した分、ゲージがぐーんと伸びる演出
+function growFx(gw,c,fx){const rows=gw.querySelectorAll('.gw');const keys=['pow','spd','wt','tec'];const big=fx.n>1;const dur=big?1500:900;let any=0;
+  const stA=stats(dId,c);
+  keys.forEach((k,ix)=>{const row=rows[ix];if(!row)return;const a=c.t[k]||0,b0=fx.before[k]||0,d=a-b0;if(d<=0)return;any=1;
+    const tr=row.querySelector('.tr'),rm=row.querySelector('.rm');const nw=parseFloat(tr.style.width)||0,nr=parseFloat(rm.style.width)||0;const ow=a?nw*b0/a:0;
+    tr.style.transition='none';rm.style.transition='none';tr.style.width=ow+'%';rm.style.width=(nr+nw-ow)+'%';void tr.offsetWidth;
+    tr.style.transition=rm.style.transition=`width ${dur}ms cubic-bezier(.2,.8,.2,1)`;tr.style.width=nw+'%';rm.style.width=nr+'%';
+    row.classList.add('gwUp');if(big)row.classList.add('gwBig');
+    const pl=document.createElement('em');pl.className='gwPlus'+(big?' big':'');pl.textContent='+'+d;row.appendChild(pl);
+    const sp=row.querySelector(':scope > span');const tn=sp&&sp.firstChild;const v1=stA[k],v0=fx.stB[k];const t0=performance.now();
+    if(tn&&tn.nodeType===3){const tick=now=>{const q=Math.min(1,(now-t0)/dur);tn.nodeValue=String(Math.round(v0+(v1-v0)*(1-Math.pow(1-q,3))));if(q<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);}
+    setTimeout(()=>{row.classList.remove('gwUp','gwBig');pl.remove();},dur+900);});
+  if(any){sfx(big?'rare':'tap');if(big)gw.classList.add('gwFlash'),setTimeout(()=>gw.classList.remove('gwFlash'),dur+300);}}
 async function doKeiko(i,n=1){const id=dId,c=S.cats[id],k=KEIKO[i];const cost=keikoCost(id);
   if(!useHP(cost*n))return;
-  const gainS={},capS={};let ups=0,expSum=0;const learnedL=[];
+  const gainS={},capS={};let ups=0,expSum=0;const learnedL=[];const before={...c.t},stB=stats(id,c);
   for(let r=0;r<n;r++){dailyAdd('keiko');const mul=keikoMul(id,c);
     for(const s in k.g){const cap=trainCap(id,c,s);const before=c.t[s];const add=Math.round((k.g[s]+rnd()*2)*mul);c.t[s]=Math.min(cap,c.t[s]+add);
       gainS[s]=(gainS[s]||0)+(c.t[s]-before);if(c.t[s]>=cap)capS[s]=1;}
     ups+=addExp(id,c,{v:18*mul});expSum+=LAST_EXP;addPExp(rookie()?PEXP.keikoRookie:PEXP.keiko);
     if(k.waza){const ch=.22+c.nat/400+tierOf(id)/200;if(rnd()<ch){const pool=[...Array(81).keys()].filter(x=>!c.waza.includes(x));
       if(pool.length){const easy=pool.filter(x=>BASIC.flat().includes(x));const src=(easy.length&&rnd()<.5)?easy:pool;const w=src[Math.floor(rnd()*src.length)];c.waza.push(w);learnedL.push(w);}}}}
-  save();
+  save();keikoFx={id,before,stB,n};
   const out=Object.keys(k.g).map(s=>gainS[s]>0?`${STATN[s]} +${gainS[s]}${capS[s]?'（上限）':''}`:`${STATN[s]} は今のレベルの上限`);
   const A=$('anim');$('aTxt').textContent=k.n+(n>1?` ×${n}`:'')+'！';$('aImg').src=k.img;$('aRes').innerHTML='';A.classList.add('on');sfx('don');
   await sleep(1700);
@@ -2114,11 +2183,11 @@ function recommendChanko(id,c){tickHP();const need={exp:0,nat:0,hp:0,pow:0,spd:0
     sc=sc/Math.sqrt(k[1]);if(S.coin<k[1])sc*=.25;if(!best||sc>best.sc)best={i,sc};});
   if(!best||best.sc<=0)return null;best.why=why;return best;}
 function renderChanko(){const id=dId,c=S.cats[id];const B=$('cBody');
-  B.innerHTML=`<div class="sum">${NAMES[id-1]}に食べさせる　コイン ${fmt(S.coin)}</div>`;
+  B.innerHTML=`<div class="sum">${NAMES[id-1]}に食べさせる<br>${coinPill()}</div>`;
   const rc=recommendChanko(id,c);if(rc){const bn=document.createElement('div');bn.className='tip recBan';bn.innerHTML=`👴 親方：${rc.why}<b>「${CHANKO[rc.i][0]}」</b>がおすすめだにゃ`;B.appendChild(bn);}
   const L=document.createElement('div');L.className='menuList';
   CHANKO.forEach((k,i)=>{const e=document.createElement('div');e.className='mItem'+(rc&&rc.i===i?' rec':'');const ef=Object.entries(k[2]).map(([a,v])=>a==='exp'?`経験+${v}`:a==='nat'?`なつき+${v}`:a==='hp'?`体力+${v}`:`${STATN[a]}+${v}`).join(' ');
-    const im=chankoEl(i);im.style.width='20cqw';e.appendChild(im);e.insertAdjacentHTML('beforeend',`<div><div class="t" style="font-size:4cqw">${k[0]}${rc&&rc.i===i?' <span class="recB">親方のおすすめ</span>':''}</div><div class="d">${ef}</div></div><div class="p">${(S.ckFree||{})[i]>0?`🎁無料×${S.ckFree[i]}`:`🐾${k[1]}`}</div>`);
+    const im=chankoEl(i);im.style.width='20cqw';e.appendChild(im);e.insertAdjacentHTML('beforeend',`<div><div class="t" style="font-size:4cqw">${k[0]}${rc&&rc.i===i?' <span class="recB">親方のおすすめ</span>':''}</div><div class="d">${ef}</div></div><div class="p">${(S.ckFree||{})[i]>0?`🎁無料×${S.ckFree[i]}`:`<img class="dmI cnI" src="img/btn41_coin.webp?v=5" alt="">${k[1]}`}</div>`);
     e.onclick=()=>eat(i);if(rc&&rc.i===i)L.prepend(e);else L.appendChild(e);});B.appendChild(L);}
 async function eat(i){const id=dId,c=S.cats[id],k=CHANKO[i];if((S.ckFree||{})[i]>0){S.ckFree[i]--;}else{if(S.coin<k[1])return toast('コインが足りないにゃ');S.coin-=k[1];}dailyAdd('chanko');
   const mul=persOf(id)===1?1.5:1;const out=[];let ups=0;addPExp(PEXP.chanko);
@@ -2154,7 +2223,7 @@ function makeOpp(rank,seed){const R=mulberry(seed);let t=Math.max(1,Math.min(20,
 // ---- 取組画面 ----
 let BT=null;
 function setFighter(el,id,rank,flip){el.innerHTML='';const f=catFigure(id,rank);if(flip){const w=document.createElement('div');w.className='flip';w.appendChild(f);el.appendChild(w);}else el.appendChild(f);}
-function infoHTML(name,id,c,st,side){const k=keshoOf(c);return`<div class="n">${name}</div>${k?`<div class="r" style="color:#ff9cd8">化粧まわし「${k[0]}」強さ+${k[2]}%</div>`:''}<div class="r">${RANKS[c.rank]}　Lv${c.lv}　★${tierOf(id)}</div><div class="s">力${st.pow} 速${st.spd} 重${st.wt} 技${st.tec}</div>`;}
+function infoHTML(name,id,c,st,side){const k=keshoOf(c);return`<div class="n">${name}<span class="tyB">${STYLE[styleOf(id)].n}</span></div>${k?`<div class="r" style="color:#ff9cd8">化粧まわし「${k[0]}」強さ+${k[2]}%</div>`:''}<div class="r">${RANKS[c.rank]}　Lv${c.lv}　★${tierOf(id)}</div><div class="s">力${st.pow} 速${st.spd} 重${st.wt} 技${st.tec}</div>`;}
 function setGauge(g){$('gNeedle').style.left=(50+Math.max(-50,Math.min(50,g/2)))+'%';const s=g*.12;
   $('fL').style.transform=`translateX(${s}cqw)`;$('fR').style.transform=`translateX(${s}cqw)`;}
 const ACTN=['押す','組む','引く'];
@@ -2170,7 +2239,7 @@ async function startBout(o){
   const stM=stats(o.me.id,o.me.c),stO=o.opp.st||stats(o.opp.id,o.opp.c);BT.stM=stM;BT.stO=stO;
   $('iL').innerHTML=infoHTML(o.me.name,o.me.id,o.me.c,stM);$('iR').innerHTML=infoHTML(o.opp.name,o.opp.id,o.opp.c,stO);
   setFighter($('fL'),o.me.id,o.me.c.rank,false);setFighter($('fR'),o.opp.id,o.opp.c.rank,true);
-  $('bDay').textContent=o.day||'';$('bHint').textContent=`相手は「${STYLE[o.opp.style].n}」タイプ`+(o.auto?'':'　押す＞組む＞引く＞押す');
+  $('bDay').textContent=o.day||'';$('bHint').textContent=o.auto?'':'押す＞組む＞引く＞押す';
   $('bLog').textContent='';setGauge(0);$('kimaCard').classList.remove('on');
   $('bCtrl').style.visibility=o.auto?'hidden':'visible';
   show('bout');
@@ -2231,7 +2300,7 @@ async function step(a){
 async function autoRun(){const R=BT.R||rnd;while(BT&&!BT.done){if(!BT.busy)await step(aiPick(styleOf(BT.me.id),R));else await sleep(100);}}
 document.querySelectorAll('#bAct .btn').forEach(b=>b.addEventListener('click',()=>step(+b.dataset.a)));
 $('bSkip').onclick=e=>{e.stopPropagation();skipBout();};
-$('tachi').onclick=()=>skipBout();
+$('tachi').onclick=e=>{e.stopPropagation();$('tachi').classList.remove('on');};   // タップは演出を閉じるだけ（スキップは「スキップ」ボタン）
 $('bAuto').onclick=()=>{if(!BT||BT.done||BT.live)return;BT.auto=true;$('bCtrl').style.visibility='hidden';autoRun();};
 async function finish(win){
   BT.done=true;if(!friendMode&&BT.day!=='運営テスト')dailyAdd('bout');const R=BT.R||rnd;
@@ -2292,9 +2361,10 @@ function makeBashoOpp(myId,myC,seed){const R=mulberry(seed+12345);
   let rank=myC.rank;const upper=myC.rank<9&&R()<OPP_UP_P;if(upper)rank=myC.rank+1;
   const o=makeOpp(rank,seed);const c=o.c;
   // 自分の猫の強さを基準に、相手を少し強く（横綱・大関はもっと強く）
-  // 基準＝その猫のレベルで8割ほど稽古した強さ（よく稽古するほど少し有利、しないと不利）
-  const ref=JSON.parse(JSON.stringify(myC));for(const k of ['pow','spd','wt','tec'])ref.t[k]=Math.round(trainCap(myId,myC,k)*.8);
-  const myP=rookie()?power(stats(myId,myC)):Math.max(power(stats(myId,myC))*.9,power(stats(myId,ref)));const boost=(OPP_BOOST[rank]||1)*(upper?1.12:1)*(rookie()?.72:1);
+  // 基準＝その猫のレベルで7割ほど稽古した強さ（よく稽古するほど有利、しないと不利）
+  const ref=JSON.parse(JSON.stringify(myC));for(const k of ['pow','spd','wt','tec'])ref.t[k]=Math.round(trainCap(myId,myC,k)*.7);
+  // 稽古した分だけ自分が有利になる（相手は自分の稽古量には合わせない）
+  const myP=power(stats(myId,ref));const boost=(OPP_BOOST[rank]||1)*(upper?1.12:1)*(rookie()?.72:1);
   let tf=.6+R()*.35;const retrain=()=>{for(const k of ['pow','spd','wt','tec'])c.t[k]=Math.round(trainCap(o.id,c,k)*tf);};retrain();
   for(let n=0;n<80&&power(stats(o.id,c))>myP*boost*1.12;n++){if(c.lv>1)c.lv--;else if(tf>0)tf=Math.max(0,tf-.1);else break;retrain();}
   for(let n=0;n<60&&power(stats(o.id,c))<myP*boost;n++){c.lv++;tf=Math.max(tf,.6+R()*.35);retrain();}
@@ -2376,17 +2446,48 @@ async function openGift(){const oy=Math.floor(rnd()*20);
   if(S.gift===today())return modal(`<h3>贈り物</h3><div style="width:36cqw;margin:0 auto">${oyaHTML(oy)}</div>今日の贈り物はもう受け取ったにゃ。<br>また明日来てね！`);
   S.gift=today();S.coin+=300;S.gem+=30;tickHP();S.hp=HP_MAX;rlog('親方の贈り物','🪙コイン 300・💎宝石 30・⚡体力満タン');save();refreshHUD();sfx('rare');
   modal(`<h3>今日の贈り物</h3><div style="width:36cqw;margin:0 auto">${oyaHTML(oy)}</div>親方からの差し入れだにゃ！<br><b>コイン300・宝石30</b><br>体力も満タンになった！`,[{t:'ごっつぁんです',c:'gold'}]);}
-const NEWS_VER=2;
+const NEWS_VER=3;
 function refreshNews(){const b=$('newsBtn');if(b)b.classList.toggle('read',(S.newsSeen||0)>=NEWS_VER);b.src=(S.newsSeen||0)>=NEWS_VER?'img/btn24b_oshirase_read.webp?v=2':'img/btn24_oshirase.webp?v=5';}
-function openHelp(){S.newsSeen=NEWS_VER;save();refreshNews();modal(`<h3>あそびかた</h3><div style="text-align:left;font-size:3.6cqw">
-  ・<b>力士ガチャ</b>：猫力士100種。★1〜★20、★が高いほどレアで強い。同じ猫が出ると☆が上がり、成長の上限が伸びる。<br>
-  ・<b>部屋</b>：猫をタップして育成。<b>稽古</b>（体力10）で能力アップ、<b>ぶつかり稽古</b>で決まり手を覚える。<b>ちゃんこ</b>はコインで食べさせる。<b>なでる</b>となつき度が上がり、取組で少し強くなる。<br>
-  ・<b>取組</b>：本場所は7日間。出場する3匹が1日1番ずつ取る（体力5）。<b>押す＞組む＞引く＞押す</b>の三すくみ。相手のタイプを見て選ぼう。4勝で番付アップ、7戦全勝で優勝！<br>
-  ・番付が上がると見た目も出世する猫がいるよ。<br>
-  ・<b>手合せ</b>：友だちと合言葉をそろえて3対3の団体戦。<br>
-  ・<b>力士工房（化粧まわし）</b>：コインで化粧まわしを買って力士につけると、取組で強くなる（勝ちやすくなる）。1つの化粧まわしは1匹がつけられる。<br>
-  ・<b>新弟子期間</b>：はじめの3場所は経験2倍、稽古の体力2、本場所の取組は体力を使わない。<br>
-  ・体力は2分で1回復。<b>贈り物</b>は1日1回。</div>`);}
+// ---- お知らせ（更新のお知らせ）と あそびかた ----
+const NEWS=[
+ {d:'11/19',t:'稽古を「まとめて」できるように',b:'稽古の画面で 1回・3回・5回・10回 を選べるよ。上がる数のめやすも出るようになった。'},
+ {d:'11/19',t:'ガチャで持っている宝石が見やすく',b:'ガチャの画面に「所持 ◯個」を出したよ。'},
+ {d:'11/19',t:'稽古した分だけ取組で勝ちやすく',b:'本場所の相手は番付とレベルで決まるよ。しっかり稽古した猫ほど有利になる。'},
+ {d:'11/19',t:'どの画面にもホームボタン',b:'右上の家のボタンで、いつでもホームにもどれるよ。'},
+ {d:'11/19',t:'猫神社に音楽がついた',b:'猫神社に入ると神社の曲が流れるよ。'},
+ {d:'11/18',t:'部屋レベル',b:'稽古・取組・ちゃんこで部屋の経験がたまるよ。レベルが上がると宝石5個と体力満タン！'}];
+function openNews(){S.newsSeen=NEWS_VER;save();refreshNews();
+  modal(`<h3>お知らせ</h3><div class="nwL">${NEWS.map(n=>`<div class="nwR"><span class="d">${n.d}</span><b>${n.t}</b><br>${n.b}</div>`).join('')}</div>`,[{t:'📖 あそびかた',c:'gold'},{t:'とじる',c:'gray'}]).then(k=>{if(k===0)openHelp();});}
+function openHelp(){S.newsSeen=NEWS_VER;save();refreshNews();modal(`<h3>あそびかた</h3><div class="hpL">
+  <div class="hpS">🐱 力士を集める</div>
+  ・<b>力士ガチャ</b>：猫力士100種。★1〜★20、★が高いほどレアで強い。1回💎10・10連💎100（10連は★6以上が1匹かならず出る）。<br>
+  ・同じ猫が出ると☆が上がり、成長の上限が伸びる。かぶると<b>かけら</b>がたまり、好きな猫と交換できる。<br>
+  ・<b>力士編成</b>：本場所と手合せに出る3匹をえらぶ。<b>力士図鑑</b>で集めた猫を見られる。
+  <div class="hpS">💪 育てる</div>
+  ・<b>稽古</b>（⚡10）：四股・てっぽう・すり足・ぶつかり稽古で能力アップ。ぶつかり稽古では決まり手を覚えることがある。<b>まとめて</b>（3回・5回・10回）もできる。<br>
+  ・能力は猫のレベルごとに上限がある。レベルは稽古・取組・ちゃんこの経験で上がる。<br>
+  ・<b>ちゃんこ</b>：コインで食べさせると、経験・なつき度・体力などが上がる。<br>
+  ・<b>なでる</b>：なつき度が上がり、取組で少し強くなる。<br>
+  ・<b>化粧まわし</b>（力士工房）：コインで買ってつけると取組で強くなる。
+  <div class="hpS">🏆 取組</div>
+  ・<b>本場所</b>は7日間。出場する3匹が1日1番ずつ取る（⚡5）。相手は同じ番付の猫（まれに格上）。<b>よく稽古した猫ほど勝ちやすい</b>。<br>
+  ・<b>押す＞組む＞引く＞押す</b>の三すくみ。名前の横の相手のタイプを見て選ぼう。「おまかせ」で自動、「スキップ」で結果だけ見られる。<br>
+  ・4勝で番付アップ、7戦全勝で優勝！ 番付が上がると見た目も出世する猫がいるよ。<br>
+  ・<b>手合せ</b>：友だちと合言葉をそろえて3対3の団体戦（体力は使わない）。スタンプも送れる。
+  <div class="hpS">⛩️ 猫神社</div>
+  ・<b>願掛け</b>（1日1回・無料）：健康・恋愛・金運・仕事・幸運からえらぶ。成就するとごほうび（ちゃんこ無料券・なつき度・コイン・体力満タン・宝石）。<br>
+  ・<b>おみくじ</b>（1日1回・無料）：大吉は宝石10個！ 今日の運勢・ラッキーアイテムもわかる。
+  <div class="hpS">🏯 部屋レベル</div>
+  ・稽古（+10）・取組（勝ち+20／負け+10）・ちゃんこ（+8）で部屋の経験がたまる。レベルが上がると<b>💎5個と⚡体力満タン</b>。ホームの「🏯 部屋 Lv」を押すと今の経験が見られる。
+  <div class="hpS">🎁 毎日のおたのしみ</div>
+  ・<b>贈り物</b>（1日1回）：コイン・宝石・体力満タン。<br>
+  ・<b>今日の特訓</b>：稽古3回・取組2回・ちゃんこ1回・手合せ1回でごほうび。<br>
+  ・<b>イベント</b>：期間限定のイベントがあるよ。<br>
+  ・<b>判子工房</b>（力士工房の中）：手合せで使うスタンプが手に入る。
+  <div class="hpS">⚡ 体力</div>
+  ・2分で1回復。贈り物・部屋レベルアップ・願掛け（仕事）で満タン。<br>
+  ・<b>新弟子期間</b>（はじめの3場所）：経験2倍、稽古は⚡2、本場所の取組は体力を使わない。
+  </div>`);}
 // ---- 受け取り履歴（設定から見られる・最新100件）----
 function rlog(src,txt){if(!S.rlog)S.rlog=[];S.rlog.unshift({t:Date.now(),s:src,r:txt});if(S.rlog.length>100)S.rlog.length=100;}
 function plainRw(h){return String(h).replace(/<img[^>]*btn41_coin[^>]*>/g,'🪙').replace(/<img[^>]*btn42_gem[^>]*>/g,'💎').replace(/<img[^>]*btn44_lightning[^>]*>/g,'⚡').replace(/<[^>]+>/g,'');}
@@ -2499,7 +2600,7 @@ async function openContact(d={}){
     if(k===0)openContact(v);}
 }
 async function openSettings(){const i=await modal(`<h3>設定</h3>部屋の名前<br><input class="inp" id="nmIn" maxlength="10" value="${S.name}"><br><br>効果音：<b>${S.sound?'オン':'オフ'}</b>　音楽：<b>${S.bgm?'オン':'オフ'}</b><br><span style="font-size:3.2cqw">クラウド保存：${cloudOK?'<b style="color:#1d6a37">オン</b>':'オフ（この画面では使えません）'}</span>`,
-  [{t:'保存',c:'gold'},{t:S.sound?'効果音をオフ':'効果音をオン'},{t:S.bgm?'音楽をオフ':'音楽をオン'},{t:'受け取り履歴',c:'blue'},{t:'📣 友だちにすすめる',c:'red'},{t:'🐾 不具合・お問い合わせ',c:'blue'},{t:'データを消す',c:'red'},{t:'とじる',c:'gray'}]);
+  [{t:'保存',c:'gold'},{t:S.sound?'効果音をオフ':'効果音をオン'},{t:S.bgm?'音楽をオフ':'音楽をオン'},{t:'受け取り履歴',c:'blue'},{t:'📣 友だちにすすめる',c:'red'},{t:'🐾 不具合・お問い合わせ',c:'blue'},{t:'データを消す',c:'red'},{t:'📖 あそびかた',c:'blue'},{t:'とじる',c:'gray'}]);
   const v=document.getElementById('nmIn')?document.getElementById('nmIn').value:S.name;
   if(i===0){S.name=(v||'にゃんこ部屋').slice(0,10);save();refreshHome();toast('保存したにゃ');}
   if(i===1){S.sound=!S.sound;save();openSettings();}
@@ -2507,6 +2608,7 @@ async function openSettings(){const i=await modal(`<h3>設定</h3>部屋の名�
   if(i===3){openRlog();}
   if(i===4){shareInvite();}
   if(i===5){openContact();}
+  if(i===7){openHelp();}
   if(i===6){const j=await modal('<h3>本当に消す？</h3>集めた猫も育てた記録もぜんぶ消えます。',[{t:'消す',c:'red'},{t:'やめる',c:'gray'}]);if(j===0){localStorage.removeItem(KEY);location.reload();}}}
 
 // ================= 手合せ（友だち対戦・Firebase）=================
@@ -2684,7 +2786,17 @@ $('gate').addEventListener('click',()=>{const a=ac();if(a&&a.resume)a.resume();m
 // ピンチ・ダブルタップでの拡大を止める（iPhoneのSafari向け）
 ['gesturestart','gesturechange','gestureend'].forEach(t=>document.addEventListener(t,e=>e.preventDefault(),{passive:false}));
 document.addEventListener('dblclick',e=>e.preventDefault(),{passive:false});
-document.addEventListener('touchmove',e=>{if(e.touches&&e.touches.length>1)e.preventDefault();},{passive:false});
+// 指でなぞったとき、中身がスクロールできる所（一覧など）以外では画面ごと動かないようにする
+function canScroll(el){for(let n=el;n&&n!==document.body;n=n.parentElement){if(n.nodeType!==1)continue;const cs=getComputedStyle(n);
+  if(/(auto|scroll)/.test(cs.overflowY)&&n.scrollHeight>n.clientHeight+1)return true;if(/(auto|scroll)/.test(cs.overflowX)&&n.scrollWidth>n.clientWidth+1)return true;}return false;}
+document.addEventListener('touchmove',e=>{if(e.touches&&e.touches.length>1){e.preventDefault();return;}
+  const t=e.target;if(t&&(t.closest&&t.closest('canvas,input,textarea,select')))return;if(!canScroll(t))e.preventDefault();},{passive:false});
+
+
+// どの画面にも右上にホームボタン（チュール祭と同じ）
+document.querySelectorAll('.screen .head').forEach(h=>{if(!h.querySelector('.back')||h.querySelector('#evHomeI,.homeI'))return;
+  const i=document.createElement('img');i.className='homeI';i.src='img/btn46_home.webp?v=1';i.alt='ホーム';
+  i.addEventListener('click',e=>{e.stopPropagation();sfx('tap');show('home');});h.appendChild(i);});
 
 // ================= 12月イベント「拾った子猫を育てよう」 =================
 const EV12_FORCE=true;   // true＝日付に関係なく開催（テスト版で使う）
@@ -2788,13 +2900,14 @@ function e12Home(){const E=e12(),B=$('e12Body');e12Roll();
    </div>
    <div class="e12Left">お世話 あと${E12_CARE-E.care}回 ／ 稽古 ${E.rank<3?'三段目から':E.keiko?'済み':'あと1回'}（毎日リセット）</div>
    <div class="e12Lad">${E12_RANKS.slice(1).map((n,i)=>`<s class="${E.rank>=i+1?'ok':''} ${E.rank===i+1?'now':''}">${n}</s>`).join('')}</div>
-   <div class="e12Foot"><button class="e12Btn sub" id="e12Zk">📖 図鑑で見る</button><button class="e12Btn sub" id="e12St">🐾 イベントスタンプ</button>${EV12_FORCE?'<button class="e12Btn sub" id="e12Next">▶ 次の日へ（テスト）</button>':''}</div>`;
+   <div class="e12Foot"><button class="e12Btn sub" id="e12Zk">📖 図鑑で見る</button><button class="e12Btn sub" id="e12St">🐾 イベントスタンプ</button>${EV12_FORCE?'<button class="e12Btn sub" id="e12Next">▶ 次の日へ（テスト）</button><button class="e12Btn sub" id="e12Reset">↺ はじめから（テスト）</button>':''}</div>`;
   e12Home.p={...E.st};
   $('e12MisB').onclick=()=>{if(E.mis)return;sfx('tap');e12Mission('daily');};
   $('e12Nm').onclick=e12Rename;$('e12Kit').onclick=()=>e12LookOv(()=>e12Home());
   $('e12Zk').onclick=()=>{sfx('tap');zTab=4;renderZukan();show('zukan');};
   $('e12St').onclick=()=>{sfx('tap');renderHanko();show('hanko');};
   if($('e12Next'))$('e12Next').onclick=()=>{E.d='';e12Roll();e12Home();toast('☀ 次の日の朝（テスト）');};
+  if($('e12Reset'))$('e12Reset').onclick=e12Reset;
   B.querySelectorAll('.e12Tk').forEach(b=>b.onclick=()=>{const a=b.dataset.a;
     if(a==='keiko'){if(E.rank<3)return toast('ふんどしデビュー（三段目）から<br>稽古できるよ');if(E.keiko)return;E.keiko=true;e12Grow('keiko');e12Flash('fundoshi','気合い！');e12Add(2);return;}
     if(E.care>=E12_CARE)return;const act=(a==='milk'&&E.rank>=3)?'chanko':a;E.care++;E.love=Math.min(E12_LOVE,E.love+2);e12Grow(act);
@@ -2807,6 +2920,9 @@ function e12Add(v){const E=e12();E.pt+=v;let up=false;
   if(up){const r=E.rank,top=r===E12_RANKS.length-1;rlog('12月イベント',`${E.name}が${E12_RANKS[r]}に昇進`);jingle('level');
     const msg=r===1?'ミルクをたくさん飲んで<br>すくすく育ってる！':r===2?'よちよち立てるようになった！':r===3?'ふんどしデビュー！<br>稽古ができるようになった':r===5?'まわしを締めて<br>一人前の関取に！':top?'ついに横綱！':'どんどん強くなってる！';
     e12Ov(`<img src="${e12Img(top?'yoroshiku':r>=3?'kiai':e12ImgFor(r))}"><h2>${E12_RANKS[r]}に昇進！</h2><p>${msg}<br><b style="color:#3a8ee5">強さ ぜんぶ +5</b></p><button class="e12Btn" id="e12R1">やったー！</button>`);$('e12R1').onclick=e12OvClose;}}
+// テスト版だけ：イベントをはじめからやり直す
+async function e12Reset(){const k=await modal('<h3>イベントをはじめから？</h3>子猫・番付・強さ・なつき度が<br>はじめにもどるよ（テスト用）<br><span style="font-size:3.2cqw">買ったスタンプはそのまま</span>',[{t:'はじめから',c:'red'},{t:'やめる',c:'gray'}]);
+  if(k!==0)return;delete S.e12;e12Home.p=null;save();toast('↺ イベントをはじめからにしたよ');renderEv12();}
 function e12Rename(){const E=e12();e12Ov(`<img src="${e12Img(e12Disp())}"><h2>名前を変える</h2><p>6文字まで</p><input id="e12NmIn" maxlength="6" value="${e12Esc(E.name)}"><br><button class="e12Btn" id="e12R1">決定</button> <button class="e12Btn sub" id="e12R0">やめる</button>`);
   $('e12R0').onclick=e12OvClose;$('e12R1').onclick=()=>{const v=$('e12NmIn').value.trim();if(!v)return toast('名前を入れてね');E.name=v;save();e12OvClose();e12Home();toast('🐾 '+v+' になったよ');};}
 function e12LookHTML(){const E=e12();return `<div class="e12LkT">見た目をえらぶ <small>番付が上がると増えるよ</small></div><div class="e12LkG"><div class="e12Lk${!E.look?' on':''}" data-k=""><div class="li">自動</div><span>今の姿</span></div>`+
