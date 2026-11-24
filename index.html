@@ -964,8 +964,8 @@ html,body{overscroll-behavior:none;position:fixed;inset:0;width:100%}
 .npP .it{min-width:0;text-align:center;background:rgba(255,255,255,.08);border:.4cqw solid #6b3a8c;border-radius:2.4cqw;padding:1cqw;cursor:pointer;color:#fff3c4;font-weight:900;font-size:2.8cqw;font-family:sans-serif}
 .npP .it img{height:15cqw;max-width:100%;object-fit:contain}.npP .it.no{opacity:.35}.npP .it.on{border-color:#ffd34d;box-shadow:0 0 0 .5cqw #ffd34d}
 .npP .gv{display:flex;gap:2cqw;justify-content:center;margin-top:1cqw}.npP .gv img{width:44%;height:auto;cursor:pointer}
-#dMore{position:absolute;left:50%;bottom:3cqw;transform:translateX(-50%);z-index:20;background:linear-gradient(#ffe08a,#e5a33a);color:#3b0a4f;font-weight:900;font-size:3.6cqw;border-radius:6cqw;padding:1.6cqw 4.4cqw;box-shadow:0 1cqw 2cqw #0009;cursor:pointer;white-space:nowrap;font-family:sans-serif;animation:dmB 1.2s ease-in-out infinite;transition:opacity .3s}
-#dMore.hide{opacity:0;pointer-events:none}@keyframes dmB{50%{transform:translate(-50%,-1.4cqw)}}.npP .gv img.off{filter:grayscale(1);opacity:.4}
+#dMore{position:absolute;right:2.4cqw;bottom:1.6cqw;z-index:20;background:linear-gradient(#ffe08a,#e5a33a);color:#3b0a4f;font-weight:900;font-size:3cqw;border-radius:6cqw;padding:1.2cqw 3cqw;box-shadow:0 1cqw 2cqw #0009;cursor:pointer;white-space:nowrap;font-family:sans-serif;animation:dmB 1.2s ease-in-out infinite;transition:opacity .3s}
+#dMore.hide{opacity:0;pointer-events:none}@keyframes dmB{50%{transform:translateY(-1.2cqw)}}.npP .gv img.off{filter:grayscale(1);opacity:.4}
 .npCat{background:rgba(0,0,0,.25);border-radius:3cqw;padding:1.4cqw;margin-bottom:2cqw}.npCat .l{font-size:3.2cqw;font-weight:900;color:#ffd96a;margin-bottom:1cqw}
 .npCat .cs{display:flex;gap:1.4cqw;overflow-x:auto}.npCat .c{flex:none;width:17cqw;text-align:center;border:.5cqw solid #6b3a8c;border-radius:2.4cqw;padding:.6cqw;cursor:pointer;background:#250a35}.npCat .c.on{border-color:#ffd34d;box-shadow:0 0 0 .5cqw #ffd34d}
 .npCat .c .th{display:block;width:11cqw;margin:0 auto}.npCat .c span{display:block;font-size:2.4cqw;color:#fff3c4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -1992,7 +1992,7 @@ function renderDetail(){const id=dId,c=S.cats[id];const B=$('dBody');B.innerHTML
     <div class="tVal" style="${P(700,y-2,215,58)}"><b>${r.v}</b><small>稽古 ${r.t}/${r.cap}</small></div>`;});
   const full=rows.filter(r=>r.t>=r.cap).map(r=>STATN[r.k]);
   h+=`<div class="tNote" style="${P(100,1104,815,70)}">${full.length?`${full.join('・')}は今のレベルでは稽古しきったよ。取組やちゃんこでレベルを上げると、また伸ばせる。`:'点線のところまで、稽古でまだ伸ばせるよ。'}</div>
-  <div class="tTot" style="${P(640,1150,270,62)}">総合力 ${power(st)}</div>`;
+  <div class="tTot" style="${P(640,1150,270,62)};white-space:nowrap;font-size:${String(power(st)).length>=4?4.1:5}cqw">総合力 ${power(st)}</div>`;
   const petLeft=Math.max(0,c.pet+10*60000-Date.now());
   const inTeam=S.team.includes(id);
   const BT_=[[48,1250,'dbtn_kesho','ke',''],[492,1250,'dbtn_keiko','kei',''],[48,1352,'dbtn_chanko','ch',''],[492,1352,'dbtn_naderu','pet',petLeft?`あと${Math.ceil(petLeft/60000)}分`:''],[270,1454,'dbtn_shutsujo','team',inTeam?'✓出場中':'']];
@@ -2275,7 +2275,7 @@ function renderKeiko(){const id=dId,c=S.cats[id];const B=$('kBody');const cost=k
   KEIKO_ORDER.forEach(i=>{const k=KEIKO[i];const e=document.createElement('div');e.className='mItem'+(rec&&rec.i===i?' rec':'');
     e.innerHTML=`<img src="${k.img}" style="width:24cqw;border-radius:2cqw" alt=""><div><div class="t"><span class="kTag">${STATN[KEIKO_MAIN[i]]}</span>${k.n}${rec&&rec.i===i?' <span class="recB">親方のおすすめ</span>':''}</div><div class="d">${k.d}</div><div class="gn">めやす ${n>1?n+'回で ':''}${keikoGainTxt(id,c,k,n)}</div></div><div class="p">⚡${cost*n}</div>`;
     e.onclick=()=>doKeiko(i,n);L.appendChild(e);});B.appendChild(L);
-  if(keikoFx&&keikoFx.id===id){const fx=keikoFx;keikoFx=null;B.scrollTop=0;gw.scrollIntoView({block:'center'});setTimeout(()=>growFx(gw,c,fx),150);}}
+  if(keikoFx&&keikoFx.id===id){const fx=keikoFx;keikoFx=null;B.scrollTop=0;safeScroll(B,gw,'center');setTimeout(()=>growFx(gw,c,fx),150);}}
 // まとめて稽古した分、ゲージがぐーんと伸びる演出
 function growFx(gw,c,fx){const rows=gw.querySelectorAll('.gw');const keys=['pow','spd','wt','tec'];const big=fx.n>1;const dur=big?1500:900;let any=0;
   const stA=stats(dId,c);
@@ -2603,10 +2603,11 @@ async function openGift(){const oy=Math.floor(rnd()*20);
   S.gift=today();S.coin+=300;S.gem+=30;tickHP();S.hp=HP_MAX;rlog('親方の贈り物','🪙コイン 300・💎宝石 30・⚡体力満タン');save();refreshHUD();sfx('rare');
   modal(`<h3>今日の贈り物</h3><div style="width:36cqw;margin:0 auto">${oyaHTML(oy)}</div>親方からの差し入れだにゃ！<br><b>コイン300・宝石30</b><br>体力も満タンになった！`,[{t:'ごっつぁんです',c:'gold'}]);}
 function NP_ON(){return true;}   // お試し用：いつでも
-const NEWS_VER=5+(NP_ON()?1:0);
+const NEWS_VER=6+(NP_ON()?1:0);
 function refreshNews(){const b=$('newsBtn');if(b)b.classList.toggle('read',(S.newsSeen||0)>=NEWS_VER);b.src=(S.newsSeen||0)>=NEWS_VER?'img/btn24b_oshirase_read.webp?v=2':'img/btn24_oshirase.webp?v=5';}
 // ---- お知らせ（更新のお知らせ）と あそびかた ----
 const NEWS=[
+ {d:'11/24',t:'🔑 引き継ぎコードをスクショしてね',b:'「設定」に、あなた専用の<b>引き継ぎコード</b>（8文字）が出るようになったよ。<b>スクショして保存</b>しておくと、データが消えたときや別のスマホに移すときに、「設定」→「💾 データの引き継ぎ」→「🔑 コードで引き継ぐ」でもとにもどせるにゃ。'},
  ...(NP_ON()?[{d:'12/1',t:'🐟 にゃんペロ屋・にゃんペロガチャ オープン！',b:'力士工房に「にゃんペロ屋」、ガチャの画面に「にゃんペロガチャ」ができたよ。買ったらお店でその場で食べさせたり、力士の詳しい画面であげたりできるにゃ！'}]:[]),
  {d:'11/20',t:'名跡帳ができたよ',b:'図鑑の「📜 名跡帳」で、引退した関取の名跡が巻物になって並ぶよ。開くと代々の力士と、季節の名跡カードが見られる！'},
  {d:'11/20',t:'「にゃんペロ」になったよ',b:'猫のおやつの名前が「にゃんペロ」に変わったよ。にゃんペロ祭もよろしくにゃ！'},
@@ -2780,6 +2781,11 @@ async function openSettings(){const i=await modal(`<h3>設定</h3>部屋の名�
 
 
 
+function safeScroll(B,el,mode){if(!B||!el)return;const r=el.getBoundingClientRect(),q=B.getBoundingClientRect();let y=B.scrollTop+(r.top-q.top);if(mode==='center')y-=(B.clientHeight-r.height)/2;B.scrollTo({top:Math.max(0,y),behavior:mode==='center'?'auto':'smooth'});}
+// 画面ずれ防止：ステージやページ自体がスクロールされたら元にもどす
+(function(){const fix=e=>{const t=e&&e.target;if(t===document||t===document.documentElement||t===document.body){if(scrollX||scrollY)scrollTo(0,0);return;}
+  if(t&&t.id==='stage'&&(t.scrollTop||t.scrollLeft)){t.scrollTop=0;t.scrollLeft=0;}};
+  addEventListener('scroll',fix,true);document.addEventListener('focusout',()=>setTimeout(()=>{if(scrollX||scrollY)scrollTo(0,0);const s=document.getElementById('stage');if(s){s.scrollTop=0;s.scrollLeft=0;}},50));})();
 // ================= 引き継ぎコード =================
 const TC_A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 function tcGen(){const r=new Uint32Array(8);crypto.getRandomValues(r);return [...r].map(x=>TC_A[x%TC_A.length]).join('');}
@@ -3227,10 +3233,10 @@ async function npGive(id,i,n,after){const v=npInv(),c=S.cats[id];if(v[i]<n)retur
 $('gNpB').onclick=()=>{if(!NP_ON())return;sfx('tap');openNpGacha();};
 (function(){const f=()=>{$('gNpB').style.display=NP_ON()?'':'none';};f();setInterval(f,60000);})();
 // 詳しい画面：下にまだあることを知らせる
-(function(){const D=$('detail');const b=document.createElement('div');b.id='dMore';b.className='hide';b.textContent=NP_ON()?'▼ 下に にゃんペロ・四股名があるよ':'▼ 下に 四股名があるよ';D.appendChild(b);
+(function(){const D=$('detail');const b=document.createElement('div');b.id='dMore';b.className='hide';b.textContent='▼ 下にもあるよ';D.appendChild(b);
   const B=$('dBody');const up=()=>{const more=B.scrollHeight-B.clientHeight-B.scrollTop>40;const np=B.querySelector('.npP');const tg=np||B.querySelector('.skP');const seen=tg&&tg.getBoundingClientRect().top<innerHeight*0.85;b.classList.toggle('hide',!more||seen);};
   B.addEventListener('scroll',up,{passive:true});new MutationObserver(()=>setTimeout(up,60)).observe(B,{childList:true});
-  b.onclick=()=>{const np=B.querySelector('.npP')||B.querySelector('.skP');if(np)np.scrollIntoView({behavior:'smooth',block:'start'});};})();
+  b.onclick=()=>{const np=B.querySelector('.npP')||B.querySelector('.skP');if(np)safeScroll(B,np,'start');};})();
 
 // ================= 12月イベント「拾った子猫を育てよう」 =================
 const EV12_FORCE=true;   // true＝日付に関係なく開催（テスト版で使う）
